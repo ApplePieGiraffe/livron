@@ -1,0 +1,206 @@
+/* ------------
+    ANIMATIONS
+   ------------ */
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------
+    BASE
+   ------ */
+
+:root {
+    --color-primary-light: #dedede;
+    --color-primary-green: #bfd200;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------
+    HEADER
+   -------- */
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../css/img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 4rem;
+        color: var(--color-primary-light);
+        animation: moveInTop .5s;
+
+        &__title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            transition: color .3s;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        &__navigation {
+            display: flex;
+            font-weight: 300;
+            text-transform: uppercase;
+            list-style: none;
+            font-size: 2rem;
+
+            & li:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+
+            & li {
+                padding: 1rem;
+                transition: all .3s;
+            
+                &:hover {
+                    color: var(--color-primary-green);
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &__hero {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary-light);
+        animation: moveInBottom 1.5s;
+
+        &__title {
+            display: flex;
+            align-items: center;
+
+            &__text {
+                font-size: 15rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                transform: translateY(-6rem);
+            }
+
+            &__icon {
+                fill: var(--color-primary-green);
+                height: 13rem;
+                margin-left: 2rem;
+                transform: translateY(-6rem);
+            }
+        }
+
+        &__subtitle {
+            margin: 1rem;
+            font-size: 3rem;
+            font-weight: 300;
+            transform: translateY(-6rem);
+        }
+    }
+}
+
+/* --------
+    POINTS
+   -------- */
+
+.point {
+    display: flex;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+
+    &__picture {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__image {
+            margin-right: 5rem;
+            width: 75%;
+            border-radius: 500px;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; 
+        margin-left: 5rem;
+        transform: translateY(-3rem);
+
+        &__title {
+            font-size: 5rem;
+            margin-bottom: 2.5rem;
+
+            & h2 {
+                font-weight: 400;
+
+                & span {
+                    color: var(--color-primary-green);
+                }
+            }
+        }
+
+        &__text {
+            font-size: 1.8rem;
+            padding-right: 8rem;
+            line-height: 1.4;
+        }
+    }
+}
