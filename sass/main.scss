@@ -153,11 +153,11 @@ a {
     }
 }
 
-/* --------
-    POINTS
-   -------- */
+/* ----------
+    FEATURES
+   ---------- */
 
-.point {
+.feature {
     display: flex;
     padding-top: 10rem;
     padding-bottom: 4rem;
@@ -165,11 +165,9 @@ a {
     &__picture {
         flex: 1;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
 
         &__image {
-            margin-right: 5rem;
             width: 75%;
             border-radius: 500px;
         }
@@ -178,11 +176,17 @@ a {
     &__content {
         flex: 1;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start; 
+        align-items: center;
         margin-left: 5rem;
         transform: translateY(-3rem);
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 85%;
+        }
 
         &__title {
             font-size: 5rem;
@@ -199,8 +203,31 @@ a {
 
         &__text {
             font-size: 1.8rem;
-            padding-right: 8rem;
             line-height: 1.4;
         }
+    }
+}
+
+.picture-left {
+    justify-content: flex-end;
+
+    & img {
+        margin-right: 5rem;
+    }
+}
+
+.picture-right {
+    justify-content: flex-start;
+
+    & img {
+        margin-left: 5rem;
+    }
+}
+
+.content-left {
+    justify-content: flex-end;
+
+    & .feature__content-container {
+        margin-right: 2rem;
     }
 }
