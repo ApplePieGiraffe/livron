@@ -251,8 +251,21 @@ a {
     SOLUTIONS
    ----------- */
 .solutions {
-    &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
 
+    &__title {
+        font-size: 5.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: var(--color-primary-light);
+        padding-bottom: 1.5rem;
+        border-bottom: 3px solid var(--color-primary-light);
+        width: 33%;
+        text-align: center;
     }
 
     &__content {
@@ -260,6 +273,7 @@ a {
         grid-column-gap: 4rem;
         grid-row-gap: 2rem;
         padding: 7rem;
+        padding-top: 5rem;
         grid-template-columns: 1fr 1fr 1fr;
        
         &__box {
