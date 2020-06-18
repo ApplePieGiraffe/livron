@@ -33,11 +33,13 @@
 :root {
     --color-primary-light: #dedede;
     --color-primary-green: #bfd200;
+    --color-primary-other: black;
 }
 
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -250,6 +252,7 @@ a {
 /* -----------
     SOLUTIONS
    ----------- */
+
 .solutions {
     display: flex;
     flex-direction: column;
@@ -261,9 +264,9 @@ a {
         font-size: 5.5rem;
         font-weight: 300;
         text-transform: uppercase;
-        color: var(--color-primary-light);
+        color: var(--color-primary-other);
         padding-bottom: 1.5rem;
-        border-bottom: 3px solid var(--color-primary-light);
+        // border-bottom: 3px solid var(--color-primary-light);
         width: 33%;
         text-align: center;
     }
