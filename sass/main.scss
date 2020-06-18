@@ -31,9 +31,9 @@
    ------ */
 
 :root {
-    --color-primary-light: #dedede;
-    --color-primary-green: #bfd200;
-    --color-primary-other: black;
+    --color-gainsboro: #dedede;
+    --color-bitter-lemon: #bfd200;
+    --color-davys-grey: #575761;
 }
 
 html {
@@ -75,13 +75,14 @@ a {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
 
     &__nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 3rem 4rem;
-        color: var(--color-primary-light);
+        color: var(--color-gainsboro);
         animation: moveInTop .5s;
 
         &__title {
@@ -111,7 +112,7 @@ a {
                 transition: all .3s;
             
                 &:hover {
-                    color: var(--color-primary-green);
+                    color: var(--color-bitter-lemon);
                     transform: scale(1.2);
                 }
             }
@@ -124,7 +125,7 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: var(--color-primary-light);
+        color: var(--color-gainsboro);
         animation: moveInBottom 1.5s;
 
         &__title {
@@ -139,7 +140,7 @@ a {
             }
 
             &__icon {
-                fill: var(--color-primary-green);
+                fill: var(--color-bitter-lemon);
                 height: 13rem;
                 margin-left: 2rem;
                 transform: translateY(-6rem);
@@ -161,7 +162,7 @@ a {
 
 .feature {
     display: flex;
-    padding-top: 12rem;
+    padding-top: 9rem;
     padding-bottom: 4rem;
 
     &__picture {
@@ -198,12 +199,13 @@ a {
         &__title {
             font-size: 5rem;
             margin-bottom: 2.5rem;
+            color: var(--color-davys-grey);
 
             & h2 {
                 font-weight: 400;
 
                 & span {
-                    color: var(--color-primary-green);
+                    color: var(--color-bitter-lemon);
                 }
             }
         }
@@ -258,17 +260,23 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 10rem;
+    margin-top: 7rem;
+    padding-top: 6rem;
+    background-color: #F8F8F8;
 
     &__title {
-        font-size: 5.5rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: var(--color-primary-other);
-        padding-bottom: 1.5rem;
-        // border-bottom: 3px solid var(--color-primary-light);
         width: 33%;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
         text-align: center;
+        color: var(--color-davys-grey);
+        padding: 1.5rem 2rem 0 2rem;
+        text-shadow: -15px 15px 20px rgba($color: #000000, $alpha: .15);
+        // border-bottom: 3px solid var(--color-gainsboro);
+        // padding-bottom: 2.7rem;
+        // margin-bottom: 1rem;
     }
 
     &__content {
@@ -292,7 +300,7 @@ a {
             &__icon {
                 height: 8rem;
                 width: 8rem;
-                fill: var(--color-primary-green);
+                fill: var(--color-bitter-lemon);
                 transition: all .3s;
             }
 
@@ -315,7 +323,7 @@ a {
 
                 &:hover {
                     transform: scale(1.15);
-                    color: var(--color-primary-green);
+                    color: var(--color-bitter-lemon);
                 }
             }
 
@@ -325,7 +333,7 @@ a {
             }
 
             &:hover &__icon {
-                fill: var(--color-primary-light);
+                fill: var(--color-gainsboro);
             }
         }
     }
