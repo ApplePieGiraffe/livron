@@ -184,9 +184,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 7rem;
+  margin-top: 2rem;
   padding-top: 6rem;
-  background-color: #F8F8F8; }
+  margin-bottom: 4rem; }
   .solutions__title {
     width: 33%;
     font-size: 5rem;
@@ -195,7 +195,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     color: var(--color-davys-grey);
-    padding: 1.5rem 2rem 0 2rem;
+    padding: 1.5rem 2rem .5rem 2rem;
     text-shadow: -15px 15px 20px rgba(0, 0, 0, 0.15); }
   .solutions__content {
     display: grid;
@@ -238,3 +238,45 @@ a {
         box-shadow: -15px 15px 50px rgba(0, 0, 0, 0.15); }
       .solutions__content__box:hover .solutions__content__box__icon {
         fill: var(--color-gainsboro); }
+
+/* -------
+    QUOTE
+   ------- */
+.quote {
+  height: 50rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 50%), url(/img/beach.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  color: white; }
+  .quote__content {
+    width: 50%;
+    padding: 16rem 10rem 12rem 10rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; }
+    .quote__content::before {
+      content: '\201C';
+      position: absolute;
+      top: 10.5rem;
+      left: 8.5rem;
+      font-size: 10rem; }
+    .quote__content__text {
+      font-size: 2rem;
+      font-weight: 300;
+      text-indent: 10%; }
+    .quote__content__credit {
+      margin-left: auto;
+      margin-right: 4rem; }
+      .quote__content__credit__name {
+        font-size: 2.4rem;
+        margin-bottom: .3rem; }
+      .quote__content__credit__title {
+        font-size: 1.8rem;
+        font-weight: 300; }
+
+.space {
+  height: 50rem; }

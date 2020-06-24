@@ -260,9 +260,10 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 7rem;
+    margin-top: 2rem;
     padding-top: 6rem;
-    background-color: #F8F8F8;
+    margin-bottom: 4rem;
+    // background-color: #F8F8F8;
 
     &__title {
         width: 33%;
@@ -272,7 +273,7 @@ a {
         text-transform: uppercase;
         text-align: center;
         color: var(--color-davys-grey);
-        padding: 1.5rem 2rem 0 2rem;
+        padding: 1.5rem 2rem .5rem 2rem;
         text-shadow: -15px 15px 20px rgba($color: #000000, $alpha: .15);
         // border-bottom: 3px solid var(--color-gainsboro);
         // padding-bottom: 2.7rem;
@@ -337,4 +338,64 @@ a {
             }
         }
     }
+}
+
+/* -------
+    QUOTE
+   ------- */
+
+.quote {
+    height: 50rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .7) 50%), url(/img/beach.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+
+    &__content {
+        width: 50%;
+        padding: 16rem 10rem 12rem 10rem;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            content: '\201C';
+            position: absolute;
+            top: 10.5rem;
+            left: 8.5rem;
+            font-size: 10rem;
+        }
+
+        &__text {
+            font-size: 2rem;
+            font-weight: 300;
+            text-indent: 10%;
+            // font-style: italic;
+            // line-height: 1.2;
+        }
+
+        &__credit {
+            margin-left: auto;
+            margin-right: 4rem;
+
+            &__name {
+                font-size: 2.4rem;
+                margin-bottom: .3rem;
+            }
+
+            &__title {
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+}
+
+.space {
+    height: 50rem;
 }
