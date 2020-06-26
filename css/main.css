@@ -1,3 +1,6 @@
+/* ---------------
+    MEDIA QUERIES
+   --------------- */
 /* ------------
     ANIMATIONS
    ------------ */
@@ -30,6 +33,12 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth; }
+  @media (max-width: 64em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 * {
   margin: 0;
@@ -189,14 +198,14 @@ a {
   padding-top: 7rem;
   margin-bottom: 6rem; }
   .solutions__title {
-    width: 33%;
+    width: 100%;
     font-size: 5rem;
     font-weight: 400;
     letter-spacing: .5rem;
     text-transform: uppercase;
     text-align: center;
     color: var(--color-davys-grey);
-    padding: 1.5rem 2rem .5rem 2rem;
+    padding: 2rem;
     text-shadow: -15px 15px 20px rgba(0, 0, 0, 0.15); }
   .solutions__content {
     display: grid;
@@ -311,7 +320,7 @@ a {
         margin-left: 2rem; }
     .cta__content hr {
       height: 2px;
-      width: 88%;
+      width: 75%;
       background-color: var(--color-quick-silver);
       border: none;
       transition: all .5s;
@@ -325,7 +334,7 @@ a {
       margin-bottom: 5.5rem;
       transition: all .5s; }
     .cta__content__navigation {
-      width: 140%;
+      width: 70vw;
       display: flex;
       justify-content: space-between;
       font-weight: 300;
@@ -340,7 +349,7 @@ a {
           color: var(--color-bitter-lemon);
           transform: scale(1.15); }
     .cta__content:hover hr {
-      width: 100%; }
+      width: 85%; }
 
 /* --------
     FOOTER

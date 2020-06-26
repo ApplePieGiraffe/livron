@@ -1,3 +1,31 @@
+/* ---------------
+    MEDIA QUERIES
+   --------------- */
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile-s {
+        @media (max-width: 20em) { @content }; // 320px and below...
+    }
+    @if $breakpoint == mobile-m {
+        @media (max-width: 23.4em) { @content }; // ~ 375px
+    }
+    @if $breakpoint == mobile-l {
+        @media (max-width: 26.6em) { @content }; // ~ 425px
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 48em) { @content }; // 768px
+    }
+    @if $breakpoint == laptop {
+        @media (max-width: 64em) { @content }; // 1024px
+    }
+    @if $breakpoint == laptop-l {
+        @media (max-width: 90em) { @content }; // 1440px
+    }
+    @if $breakpoint == monitor {
+        @media (min-width: 112.5em) { @content }; // 1800 and beyond...
+    }
+}
+
 /* ------------
     ANIMATIONS
    ------------ */
@@ -41,6 +69,14 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    @include respond(laptop) {
+        font-size: 50%;
+    }
+
+    @include respond(monitor) {
+        font-size: 75%;
+    }
 }
 
 * {
@@ -266,14 +302,14 @@ a {
     margin-bottom: 6rem;
 
     &__title {
-        width: 33%;
+        width: 100%;
         font-size: 5rem;
         font-weight: 400;
         letter-spacing: .5rem;
         text-transform: uppercase;
         text-align: center;
         color: var(--color-davys-grey);
-        padding: 1.5rem 2rem .5rem 2rem;
+        padding: 2rem;
         text-shadow: -15px 15px 20px rgba($color: #000000, $alpha: .15);
     }
 
@@ -434,7 +470,7 @@ a {
     
         & hr {
             height: 2px;
-            width: 88%;
+            width: 75%;
             background-color: var(--color-quick-silver);
             border: none;
             transition: all .5s;
@@ -452,7 +488,8 @@ a {
         }
 
         &__navigation {
-            width: 140%;
+            // width: 140%;
+            width: 70vw;
             display: flex;
             justify-content: space-between;
             font-weight: 300;
@@ -474,7 +511,7 @@ a {
 
         &:hover {
             & hr {
-                width: 100%;
+                width: 85%;
             }
         }
     }
